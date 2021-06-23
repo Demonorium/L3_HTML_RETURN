@@ -10,7 +10,11 @@ public class Controller {
 
     private int tryParse(String value) {
         try {
-            return Integer.parseInt(value);
+            int result = Integer.parseInt(value);
+            if (result > 255)
+                return 255;
+
+            return Math.max(result, 0);
         } catch (NumberFormatException exp) {
             return 0;
         }
