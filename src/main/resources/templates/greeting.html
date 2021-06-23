@@ -10,7 +10,7 @@
         <div style="vertical-align:middle;display:table-cell!important; text-align: left;">
             <div style="border:1px solid;border-color:black;display:inline-block">
                 <form action="#" th:action="@{/greeting}" th:object="${input}" method="post">
-                    <p>Имя пользователя: <input type="text" th:field="*{username}" /></p>
+                    <p>Имя пользователя: <input id="username" name="username" required="required" type="text" placeholder="Username" th:field="*{username}" /></p>
                     <p>Цвет фона:</p>
                     <p>
                         R: <input type="text" th:field="*{r}" />
