@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body th:style="'background-color:'+${controller.backcolor}+'; color:'+${controller.color}+'!important;text-color:'+${controller.color}+'!important;min-height: 100%; text-align:center;'">
+<div style="display:inline-block;">
+    <div
+        style="min-height: 90vh; align:center;display:table;">
+        <div style="vertical-align:middle;display:table-cell!important">
+            <div th:style="'border:1px solid;border-color:'+${controller.color}+';display:inline-block;'">
+                <p
+                    style="middle;display:table-cell!important;"
+                    th:text="'Hello, '+${controller.username}+'!'"></p>
+                <p>
+                <a
+                    th:style="'display:table-cell!important;color:'+${controller.color}+'!important;'"
+                    href="/greeting">Поменять настройки</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
